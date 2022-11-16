@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bug Reproduction</title>
+</head>
+<body>
+<div id="wrapper">
+  <div id="app-content"></div>
+</div>
+
+<script type="module">
+  import {createApp} from 'vue/dist/vue.esm-bundler';
+
+  import {AComponent} from './src/main.ts';
+
+  const app = createApp(AComponent);
+  app.mount('#app-content');
+</script>
+</body>
+</html>
